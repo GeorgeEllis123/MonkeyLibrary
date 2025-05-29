@@ -24,6 +24,7 @@ public class Bin : MonoBehaviour
     {
         addSound.Play();
         books.Add(book);
+        BookGenerator.RemoveBook(book);
         book.SetActive(false); // this is wrong should add the book visually but just temporary
         if (books.Count >= 4) 
         {

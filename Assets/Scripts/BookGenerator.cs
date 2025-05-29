@@ -7,13 +7,16 @@ public class BookGenerator : MonoBehaviour
     public GameObject book; //book prefab
    
     //master list of all returned books
-    public List<GameObject> bookList;
+    public static List<GameObject> bookList;
     
     //how many randomly generated books should be loaded into the book return
     public int numOfBooks = 20;
 
     //how many books should be displayed at a time
-    public int booksOnDisplay = 4;
+    public static int booksOnDisplay = 5;
+
+    //how many books have currently been sorted (resets at 0)
+    public static int booksSorted = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +32,7 @@ public class BookGenerator : MonoBehaviour
         
     }
 
-    public void DisplayNewBooks()
+    public static void DisplayNewBooks()
     {
         //display first few books
         for (int i = 0; i < booksOnDisplay; i++)
@@ -49,6 +52,17 @@ public class BookGenerator : MonoBehaviour
             bdata.GenerateData();
             b.SetActive(false); //deactivate by default
             bookList.Add(b);
+        }
+    }
+
+    public static void RemoveBook(GameObject b)
+    {
+        bookList.Remove(b);
+        booksSorted++;
+        if (booksSorted >= booksOnDisplay)
+        {
+            booksSorted = 0;
+            DisplayNewBooks();
         }
     }
 }
