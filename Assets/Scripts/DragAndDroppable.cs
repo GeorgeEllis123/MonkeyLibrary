@@ -1,10 +1,18 @@
+using System;
 using UnityEngine;
 
 public class DragAndDroppable : MonoBehaviour
 {
-    public GameObject cursor;
+    [SerializeField] private GameObject cover;
+    [SerializeField] private SpriteRenderer side;
+    [SerializeField] private GameObject otherSideStuff;
+    [SerializeField] private BoxCollider2D collider;
+
+    private GameObject cursor;
     private BoxCollider2D bc;
     private Rigidbody2D rb;
+
+    private bool isSideways = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,17 +22,12 @@ public class DragAndDroppable : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnMouseDown()
     {
         transform.SetParent(cursor.transform);
         bc.enabled = false;
         rb.simulated = false;
+        RotateBook();
     }
 
     private void OnMouseUp()
@@ -32,5 +35,15 @@ public class DragAndDroppable : MonoBehaviour
         transform.SetParent(null);
         bc.enabled = true;
         rb.simulated = true;
+        RotateBook();
+    }
+
+    private void RotateBook()
+    {
+        isSideways = !isSideways;
+        cover.SetActive(!isSideways);
+        otherSideStuff.SetActive(isSideways);
+        side.enabled = isSideways;
+        collider.enabled = isSideways;
     }
 }

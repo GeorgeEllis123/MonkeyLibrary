@@ -1,22 +1,25 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BookGenerator : MonoBehaviour
 {
 
+    public Transform bookSpawnPoint;
+
     public GameObject book; //book prefab
    
     //master list of all returned books
-    public static List<GameObject> bookList;
+    public List<GameObject> bookList;
     
     //how many randomly generated books should be loaded into the book return
     public int numOfBooks = 20;
 
     //how many books should be displayed at a time
-    public static int booksOnDisplay = 5;
+    public int booksToDisplay = 5;
 
     //how many books have currently been sorted (resets at 0)
-    public static int booksSorted = 0;
+    public int booksLeft = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,19 +29,24 @@ public class BookGenerator : MonoBehaviour
         DisplayNewBooks();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisplayNewBooks()
     {
-        
+        StartCoroutine(DisplayBooksWithDelay());
     }
 
-    public static void DisplayNewBooks()
+    IEnumerator DisplayBooksWithDelay()
     {
-        //display first few books
-        for (int i = 0; i < booksOnDisplay; i++)
+        for (int i = booksLeft; i < booksToDisplay; i++)
         {
-            bookList[i].SetActive(true);
-            bookList[i].transform.position = new Vector2(((i - 6) + (i * 2)), bookList[i].transform.position.y); //the math on this positioning might be totally wrong
+            try
+            {
+                bookList[i].SetActive(true);
+            } catch (System.Exception e)
+            {
+                Debug.Log("No More books");
+            }
+            
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
@@ -47,7 +55,7 @@ public class BookGenerator : MonoBehaviour
         //initialize list of procedurally generated books
         for (int i = 0; i < numOfBooks; i++)
         {
-            GameObject b = Instantiate(book);
+            GameObject b = Instantiate(book, bookSpawnPoint);
             BookData bdata = b.GetComponent<BookData>();
             bdata.GenerateData();
             b.SetActive(false); //deactivate by default
@@ -55,13 +63,12 @@ public class BookGenerator : MonoBehaviour
         }
     }
 
-    public static void RemoveBook(GameObject b)
+    public void RemoveBook(GameObject b)
     {
         bookList.Remove(b);
-        booksSorted++;
-        if (booksSorted >= booksOnDisplay)
+        booksLeft--;
+        if (booksLeft <= 1)
         {
-            booksSorted = 0;
             DisplayNewBooks();
         }
     }

@@ -1,14 +1,26 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent (typeof(BoxCollider2D))]
 public class Bin : MonoBehaviour
 {
+    public BookGenerator bookGenerator;
+
     [Header("Audio Sources")]
     [SerializeField] private AudioSource addSound;
     [SerializeField] private AudioSource clearSound;
 
-    private List<GameObject> books = new List<GameObject>();
+    private TextMeshProUGUI scoreText;
+
+    public List<GameObject> books = new List<GameObject>();
+
+    private void Start()
+    {
+        scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,8 +34,7 @@ public class Bin : MonoBehaviour
     {
         addSound.Play();
         books.Add(book);
-        BookGenerator.RemoveBook(book);
-        book.SetActive(false); // this is wrong should add the book visually but just temporary
+        bookGenerator.RemoveBook(book);
         if (books.Count >= 4) 
         {
             ScoreContents();
@@ -33,7 +44,6 @@ public class Bin : MonoBehaviour
     private void ScoreContents()
     {
         clearSound.Play();
-        books.Clear();
 
         int[][] tracker = new int[3][];
         tracker[0] = new int[4]; // genre
@@ -98,16 +108,16 @@ public class Bin : MonoBehaviour
                     tracker[2][1] += 1;
                     break;
                 case (BookData.Colors.Green):
-                    tracker[3][2] += 1;
+                    tracker[2][2] += 1;
                     break;
                 case (BookData.Colors.Blue):
-                    tracker[4][3] += 1;
+                    tracker[2][3] += 1;
                     break;
             }
         }
 
         int score = 0;
-        for (int i = 0; i < 3;  i++)
+        for (int i = 0; i < tracker.Length;  i++)
         {
             int[] a = tracker[i];
             for (int j = 0; j < a.Length; j++)
@@ -116,5 +126,25 @@ public class Bin : MonoBehaviour
                 score += val * val;
             }
         }
+
+        StartCoroutine(ClearBooks());
+        UpdateScore(score);
     }
+
+    private void UpdateScore(int score)
+    {
+        score += int.Parse(scoreText.text);
+        scoreText.text = score.ToString("D3");
+    }
+
+    private IEnumerator ClearBooks()
+    {
+        yield return new WaitForSeconds(0.5f);
+        foreach (GameObject bd in books)
+        {
+            Destroy(bd); // you get an error if you move a book from one bin to another !!!!
+        }
+        books.Clear();
+    }
+
 }
