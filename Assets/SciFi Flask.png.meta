@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7ba8d1ad38c6704e8b328f4695a584c
+guid: e47d4a39c4bbe614999cce854cce85af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 852696800314406782
-    second: Title4_0
+      213: 617464689747322875
+    second: SciFi Flask_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Title4_0
+      name: SciFi Flask_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 28
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e773adbd83365db00800000000000000
-      internalID: 852696800314406782
+      spriteID: bf76cb52ddca19800800000000000000
+      internalID: 617464689747322875
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Title4_0: 852696800314406782
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
