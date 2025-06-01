@@ -47,24 +47,143 @@ public class BookVisualManagement : MonoBehaviour
 
     private void LoadInformation()
     {
-        // do the same for bd.icon and bd.number see BoodData.cs for the Enums
         switch (bd.color)
         {
-            case (BookData.Colors.Red):
+            case BookData.Colors.Red:
                 backgroundSide.color = red;
                 backgroundCover.color = red;
                 break;
-            case (BookData.Colors.Orange):
+            case BookData.Colors.Orange:
                 backgroundSide.color = orange;
                 backgroundCover.color = orange;
                 break;
-            case (BookData.Colors.Green):
+            case BookData.Colors.Green:
                 backgroundSide.color = green;
                 backgroundCover.color = green;
                 break;
-            case (BookData.Colors.Blue):
+            case BookData.Colors.Blue:
                 backgroundSide.color = blue;
                 backgroundCover.color = blue;
+                break;
+        }
+
+        switch (bd.icon)
+        {
+            case BookData.Icon.SpaceShip:
+                if (spaceShip != null)
+                {
+                    iconSide.sprite = spaceShip;
+                    iconCover.sprite = spaceShip;
+                }
+                break;
+            case BookData.Icon.PotionFlask:
+                if (potionFlask != null)
+                {
+                    iconSide.sprite = potionFlask;
+                    iconCover.sprite = potionFlask;
+                }
+                break;
+            case BookData.Icon.Dragon:
+                if (dragon != null)
+                {
+                    iconSide.sprite = dragon;
+                    iconCover.sprite = dragon;
+                }
+                break;
+            case BookData.Icon.Knight:
+                if (knight != null)
+                {
+                    iconSide.sprite = knight;
+                    iconCover.sprite = knight;
+                }
+                break;
+            case BookData.Icon.Person:
+                if (person != null)
+                {
+                    iconSide.sprite = person;
+                    iconCover.sprite = person;
+                }
+                break;
+            case BookData.Icon.Portrait:
+                if (portrait != null)
+                {
+                    iconSide.sprite = portrait;
+                    iconCover.sprite = portrait;
+                }
+                break;
+            case BookData.Icon.Solider:
+                if (solider != null)
+                {
+                    iconSide.sprite = solider;
+                    iconCover.sprite = solider;
+                }
+                break;
+            case BookData.Icon.Map:
+                if (map != null)
+                {
+                    iconSide.sprite = map;
+                    iconCover.sprite = map;
+                }
+                break;
+        }
+
+        switch (bd.number)
+        {
+            case BookData.Number.One:
+                if (one != null)
+                {
+                    numberSide.sprite = one;
+                    numberCover.sprite = one;
+                }
+                break;
+            case BookData.Number.Two:
+                if (two != null)
+                {
+                    numberSide.sprite = two;
+                    numberCover.sprite = two;
+                }
+                break;
+            case BookData.Number.Three:
+                if (three != null)
+                {
+                    numberSide.sprite = three;
+                    numberCover.sprite = three;
+                }
+                break;
+            case BookData.Number.Four:
+                if (four != null)
+                {
+                    numberSide.sprite = four;
+                    numberCover.sprite = four;
+                }
+                break;
+            case BookData.Number.Five:
+                if (five != null)
+                {
+                    numberSide.sprite = five;
+                    numberCover.sprite = five;
+                }
+                break;
+            case BookData.Number.Six:
+                if (six != null)
+                {
+                    numberSide.sprite = six;
+                    numberCover.sprite = six;
+                }
+                break;
+            case BookData.Number.Seven:
+                if (seven != null)
+                {
+                    numberSide.sprite = seven;
+                    numberCover.sprite = seven;
+                }
+                break;
+            case BookData.Number.Eight:
+                if (eight != null)
+                {
+                    numberSide.sprite = eight;
+                    numberCover.sprite = eight;
+                }
                 break;
         }
     }
