@@ -10,6 +10,9 @@ public class DragAndDroppable : MonoBehaviour
     [SerializeField] private Sprite grabImage;
     [SerializeField] private Sprite idleImage;
 
+    [SerializeField] private AudioSource pickupSfx;
+    [SerializeField] private AudioSource spawnSfx;
+
     private GameObject cursor;
     private BoxCollider2D bc;
     private Rigidbody2D rb;
@@ -29,6 +32,7 @@ public class DragAndDroppable : MonoBehaviour
     {
         if (canBeMoved)
         {
+            pickupSfx.Play();
             transform.SetParent(cursor.transform);
             cursor.GetComponentInChildren<SpriteRenderer>().sprite = grabImage;
             bc.enabled = false;
@@ -62,5 +66,10 @@ public class DragAndDroppable : MonoBehaviour
     public void Lock()
     {
         canBeMoved = false;
+    }
+
+    private void OnEnable()
+    {
+        spawnSfx.Play();
     }
 }
