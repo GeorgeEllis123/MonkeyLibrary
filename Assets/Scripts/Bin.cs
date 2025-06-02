@@ -34,6 +34,7 @@ public class Bin : MonoBehaviour
     {
         addSound.Play();
         books.Add(book);
+        book.GetComponent<DragAndDroppable>().Lock();
         bookGenerator.RemoveBook(book);
         if (books.Count >= 4) 
         {

@@ -234,13 +234,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5465392865628372075}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.51, y: 0.1803, z: 0.008346031}
-  m_LocalScale: {x: 0.07926659, y: 1.2740247, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.47, y: 0.168, z: 0.008346031}
+  m_LocalScale: {x: 1.8030471, y: 0.122482985, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3266523802004257578}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2019344812569434215
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -511,22 +511,22 @@ MonoBehaviour:
   orange: {r: 1, g: 0.41667736, b: 0, a: 1}
   green: {r: 0, g: 1, b: 0.11084986, a: 1}
   blue: {r: 0, g: 0.6545744, b: 1, a: 1}
-  spaceShip: {fileID: 21300000, guid: 7bf8ec772ae72e943ba70f3afd08cddc, type: 3}
+  spaceShip: {fileID: 21300000, guid: 34593300c78846b44bb3cc5f30f2991f, type: 3}
   potionFlask: {fileID: 21300000, guid: e47d4a39c4bbe614999cce854cce85af, type: 3}
-  dragon: {fileID: 21300000, guid: 2c5fb99a2ab7120449f387392912b16f, type: 3}
+  dragon: {fileID: 21300000, guid: 975b6e7a951aac549bd05231e4db9da4, type: 3}
   knight: {fileID: 21300000, guid: 780ab027478598841b3b9262d23f4885, type: 3}
-  person: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 8867f083b3157c340af575e7960882f6, type: 3}
-  solider: {fileID: 0}
-  map: {fileID: 0}
-  one: {fileID: 0}
-  two: {fileID: 0}
-  three: {fileID: 0}
-  four: {fileID: 0}
-  five: {fileID: 0}
-  six: {fileID: 0}
-  seven: {fileID: 0}
-  eight: {fileID: 0}
+  person: {fileID: 21300000, guid: d47fac35aa470e942a3ffb1445d44104, type: 3}
+  portrait: {fileID: 21300000, guid: ac7c5c5cbe3ea9a4ea9e9c12479de0f2, type: 3}
+  solider: {fileID: 21300000, guid: 533ebd53143092340ac579786835df46, type: 3}
+  map: {fileID: 21300000, guid: 22ddf659bbd840044aaf529fca2315e5, type: 3}
+  one: {fileID: 21300000, guid: 12d2107fb1bf4b04b927c441fb33df91, type: 3}
+  two: {fileID: 21300000, guid: 2e5cee185b824b04ebd7b2572bd097ec, type: 3}
+  three: {fileID: 21300000, guid: 20096f4f1b1b8914d878e578e05b065d, type: 3}
+  four: {fileID: 21300000, guid: 9c5430b918b2acb498b556466073447a, type: 3}
+  five: {fileID: 21300000, guid: f3467a290c806f9458056821899af739, type: 3}
+  six: {fileID: 21300000, guid: 9b3d1cd087947834a922a8f9754a2036, type: 3}
+  seven: {fileID: 21300000, guid: f657d67ba50e146429652d6a9ce39637, type: 3}
+  eight: {fileID: 21300000, guid: 75b01c6e0aff95c4ba55302e34ce69de, type: 3}
   backgroundSide: {fileID: 8024494261300919155}
   iconSide: {fileID: 2019344812569434215}
   numberSide: {fileID: 8961915441903280088}
@@ -645,13 +645,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8648627731710788460}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.56, y: -0.148, z: 0.008346031}
-  m_LocalScale: {x: 0.09683393, y: 1.476181, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.51, y: -0.148, z: 0.008346031}
+  m_LocalScale: {x: 1.682086, y: 0.11114093, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3266523802004257578}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8961915441903280088
 SpriteRenderer:
   m_ObjectHideFlags: 0

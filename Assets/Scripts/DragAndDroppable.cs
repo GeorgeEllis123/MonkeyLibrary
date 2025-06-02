@@ -12,6 +12,7 @@ public class DragAndDroppable : MonoBehaviour
     private BoxCollider2D bc;
     private Rigidbody2D rb;
 
+    private bool canBeMoved = true;
     private bool isSideways = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,18 +25,25 @@ public class DragAndDroppable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        transform.SetParent(cursor.transform);
-        bc.enabled = false;
-        rb.simulated = false;
-        RotateBook();
+        if (canBeMoved)
+        {
+            transform.SetParent(cursor.transform);
+            bc.enabled = false;
+            rb.simulated = false;
+            RotateBook();
+        }
     }
 
     private void OnMouseUp()
     {
-        transform.SetParent(null);
-        bc.enabled = true;
-        rb.simulated = true;
-        RotateBook();
+        if (canBeMoved)
+        {
+            transform.SetParent(null);
+            bc.enabled = true;
+            rb.simulated = true;
+            RotateBook();
+        }
+            
     }
 
     private void RotateBook()
@@ -45,5 +53,10 @@ public class DragAndDroppable : MonoBehaviour
         otherSideStuff.SetActive(isSideways);
         side.enabled = isSideways;
         collider.enabled = isSideways;
+    }
+
+    public void Lock()
+    {
+        canBeMoved = false;
     }
 }
