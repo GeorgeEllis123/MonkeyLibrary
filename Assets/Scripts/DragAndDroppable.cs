@@ -7,6 +7,8 @@ public class DragAndDroppable : MonoBehaviour
     [SerializeField] private SpriteRenderer side;
     [SerializeField] private GameObject otherSideStuff;
     [SerializeField] private BoxCollider2D collider;
+    [SerializeField] private Sprite grabImage;
+    [SerializeField] private Sprite idleImage;
 
     private GameObject cursor;
     private BoxCollider2D bc;
@@ -28,6 +30,7 @@ public class DragAndDroppable : MonoBehaviour
         if (canBeMoved)
         {
             transform.SetParent(cursor.transform);
+            cursor.GetComponentInChildren<SpriteRenderer>().sprite = grabImage;
             bc.enabled = false;
             rb.simulated = false;
             RotateBook();
@@ -39,6 +42,7 @@ public class DragAndDroppable : MonoBehaviour
         if (canBeMoved)
         {
             transform.SetParent(null);
+            cursor.GetComponentInChildren<SpriteRenderer>().sprite = idleImage;
             bc.enabled = true;
             rb.simulated = true;
             RotateBook();

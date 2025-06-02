@@ -614,6 +614,8 @@ MonoBehaviour:
   side: {fileID: 84688170326044977}
   otherSideStuff: {fileID: 2036441669798430847}
   collider: {fileID: 8274919658047753564}
+  grabImage: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  idleImage: {fileID: 21300000, guid: 1a3973fa0969d7d4e9294a42f1362269, type: 3}
 --- !u!114 &-7319921028442931795
 MonoBehaviour:
   m_ObjectHideFlags: 0
