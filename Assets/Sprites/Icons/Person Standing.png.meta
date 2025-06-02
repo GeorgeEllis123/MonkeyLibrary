@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ac7c5c5cbe3ea9a4ea9e9c12479de0f2
+guid: d47fac35aa470e942a3ffb1445d44104
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9180426125723624345
-    second: Portrait_0
+      213: -3170867058251076788
+    second: Person Standing_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Portrait_0
+      name: Person Standing_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76c17812413989080800000000000000
-      internalID: -9180426125723624345
+      spriteID: c4be4f2e531def3d0800000000000000
+      internalID: -3170867058251076788
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Person Standing_0: -3170867058251076788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
