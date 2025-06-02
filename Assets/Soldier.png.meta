@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8867f083b3157c340af575e7960882f6
+guid: 533ebd53143092340ac579786835df46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9180426125723624345
-    second: Portrait_0
+      213: -3868812660829053132
+    second: Soldier_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Portrait_0
+      name: Soldier_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
+        width: 63
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76c17812413989080800000000000000
-      internalID: -9180426125723624345
+      spriteID: 43f10c002673f4ac0800000000000000
+      internalID: -3868812660829053132
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Portrait_0: -9180426125723624345
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
