@@ -1267,6 +1267,7 @@ GameObject:
   - component: {fileID: 3049709286468846006}
   - component: {fileID: 6853824007880472965}
   - component: {fileID: 4334602918540106642}
+  - component: {fileID: 6853824007880472966}
   m_Layer: 0
   m_Name: StartingTray
   m_TagString: Untagged
@@ -1388,7 +1389,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.63, y: 0.56}
+  m_Size: {x: 0.63, y: 0.82}
   m_EdgeRadius: 0
 --- !u!61 &5072159539091777921
 BoxCollider2D:
@@ -1625,6 +1626,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6853824007880472966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314767780874579182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241a9175cf453f64887d09ffd7cc245c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &7778000238525674358
 BoxCollider2D:
   m_ObjectHideFlags: 0
