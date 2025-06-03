@@ -12,6 +12,10 @@ public class BookGenerator : MonoBehaviour
     public List<GameObject> bookList; //master list of all returned books
     public int numOfBooks = 20; //how many randomly generated books should be loaded into the book return
     public int booksToDisplay = 5; //how many books should be displayed at a time
+    public Transform remainingContainer;
+    public GameObject bookIconPrefab;
+
+    private List<GameObject> icons = new List<GameObject>();
 
     private int booksInBatch = 0;
     private int booksLeft;
@@ -74,6 +78,17 @@ public class BookGenerator : MonoBehaviour
 
     private void UpdateUI()
     {
-        booksRemainingText.text = booksLeft.ToString();
+        foreach (var icon in icons)
+        {
+            Destroy(icon);
+        }
+        icons.Clear();
+
+        for (int i = 0; i < booksLeft; i++)
+        {
+            GameObject icon = Instantiate(bookIconPrefab, remainingContainer);
+            icon.SetActive(true);
+            icons.Add(icon);
+        }
     }
 }
