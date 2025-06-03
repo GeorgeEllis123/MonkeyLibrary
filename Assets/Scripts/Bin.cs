@@ -118,7 +118,7 @@ public class Bin : MonoBehaviour
             }
         }
 
-        int score = 0;
+        int score = -12;
         for (int i = 0; i < tracker.Length;  i++)
         {
             int[] a = tracker[i];
