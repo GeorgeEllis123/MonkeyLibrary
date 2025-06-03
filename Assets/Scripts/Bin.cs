@@ -8,6 +8,7 @@ using UnityEngine;
 public class Bin : MonoBehaviour
 {
     public BookGenerator bookGenerator;
+    public BananaSpawner bananaSpawner;
 
     [Header("Audio Sources")]
     [SerializeField] private AudioSource addSound;
@@ -134,6 +135,7 @@ public class Bin : MonoBehaviour
 
     private void UpdateScore(int score)
     {
+        bananaSpawner.StartSpawningBananas(score);
         score += int.Parse(scoreText.text);
         scoreText.text = score.ToString("D3");
     }
