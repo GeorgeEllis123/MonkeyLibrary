@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BookGenerator : MonoBehaviour
 {
@@ -14,17 +16,48 @@ public class BookGenerator : MonoBehaviour
     public int booksToDisplay = 5; //how many books should be displayed at a time
     public Transform remainingContainer;
     public GameObject bookIconPrefab;
+    public GameObject resetPanel;
+    public GameObject resetButton;
 
     private List<GameObject> icons = new List<GameObject>();
 
     private int booksInBatch = 0;
     private int booksLeft;
+    private bool menuActive = false;
 
     void Start()
     {
         GenerateNewBooks();
 
         DisplayNewBooks();
+    }
+
+    private void Update()
+    {
+        if (booksInBatch <= 0 && booksLeft <= 0 && !menuActive)
+        {
+            menuActive = true;
+            resetPanel.SetActive(true);
+        }
+
+        if (menuActive)
+        {
+            Image panelImage = resetPanel.GetComponent<Image>();
+            Color panelColor = panelImage.color;
+            if (panelColor.a < 0.5f)
+            {
+                panelColor.a += Time.deltaTime * 0.5f; // Adjust speed as needed
+                panelImage.color = panelColor;
+            }
+            TextMeshProUGUI buttonText = resetButton.GetComponent<TextMeshProUGUI>();
+            Color textColor = buttonText.color;
+            if (textColor.a < 1f)
+            {
+                textColor.a += Time.deltaTime * 1.0f;
+                buttonText.color = textColor;
+            }
+
+        }
     }
 
     public void DisplayNewBooks()
