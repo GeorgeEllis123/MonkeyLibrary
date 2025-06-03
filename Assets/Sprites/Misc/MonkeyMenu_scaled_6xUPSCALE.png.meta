@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f49c9ca05a9ff224bbc3cc104b08fd74
+guid: 59e9b666aaecd7d45b435d23f2e97ac9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -875271010135634819
-    second: MonkeyMenu_0
+      213: 6736044732971858187
+    second: MonkeyMenu_scaled_6x_pngcrushed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MonkeyMenu_0
+      name: MonkeyMenu_scaled_6x_pngcrushed_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 180
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7c0ba657a96ad3f0800000000000000
-      internalID: -875271010135634819
+      spriteID: b09bdebdefc3b7d50800000000000000
+      internalID: 6736044732971858187
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MonkeyMenu_0: -875271010135634819
+      MonkeyMenu_scaled_6x_pngcrushed_0: 6736044732971858187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
